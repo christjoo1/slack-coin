@@ -6,7 +6,15 @@
 
 <title>SalaryLupangCoin ($SLACK)</title>
 
-<meta name="description" content="SalaryLupangCoin ($SLACK) - Meme token powered by salary escape culture. Community-driven fair launch experiment on BSC.">
+<meta name="description" content="SalaryLupangCoin ($SLACK) - Meme token powered by salary escape culture. Community-driven fair launch experiment on BNB Smart Chain.">
+
+<meta property="og:title" content="SalaryLupangCoin ($SLACK)">
+<meta property="og:description" content="Community-driven meme token with fair launch and locked liquidity.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://christjoo1.github.io/slack-coin/slack-logo-transparent.png">
+<meta property="og:url" content="https://christjoo1.github.io/slack-coin/">
+
+<link rel="icon" href="https://christjoo1.github.io/slack-coin/slack-logo-transparent.png">
 
 <style>
 body {
@@ -17,10 +25,19 @@ body {
     line-height: 1.6;
 }
 
+/* ===== HEADER ===== */
 header {
     text-align: center;
     padding: 90px 20px;
     background: linear-gradient(45deg, #111, #222);
+    position: relative;
+}
+
+/* LOGO FIX (IMPORTANT) */
+.logo {
+    width: 120px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 12px #00ff99);
 }
 
 h1 {
@@ -39,6 +56,7 @@ h1 {
     margin-top: 10px;
 }
 
+/* BUTTONS */
 .btn {
     display: inline-block;
     margin: 8px;
@@ -54,12 +72,14 @@ h1 {
     background: #00cc77;
 }
 
+/* SECTION */
 .section {
     max-width: 1000px;
     margin: auto;
     padding: 60px 20px;
 }
 
+/* CARD */
 .card {
     background: #161616;
     padding: 25px;
@@ -68,17 +88,20 @@ h1 {
     border: 1px solid #222;
 }
 
-.small {
-    font-size: 13px;
-    opacity: 0.7;
-}
-
+/* GRID */
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
+/* SMALL TEXT */
+.small {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .grid { grid-template-columns: 1fr; }
 }
@@ -89,12 +112,16 @@ h1 {
 <body>
 
 <header>
+
+    <!-- ✅ LOGO (FIXED) -->
+    <img class="logo" src="https://christjoo1.github.io/slack-coin/slack-logo-transparent.png" alt="$SLACK Logo">
+
     <h1>💸 SalaryLupangCoin ($SLACK)</h1>
     <p class="tagline">Escape Salary. Join the Meme Economy 🚀</p>
 
     <p class="fomo">⚠️ Early Stage Entry — Before Viral Expansion</p>
 
-    <!-- ✅ FIXED LINKS -->
+    <!-- REAL LINKS -->
     <a class="btn" href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x17c7aCcA8CB87c575C276e3537A8790AAaDA9F80" target="_blank">
         Buy on PancakeSwap
     </a>
@@ -104,6 +131,7 @@ h1 {
     </a>
 
     <a class="btn" href="#whitepaper">Read Whitepaper</a>
+
 </header>
 
 <!-- FOMO STRIP -->
@@ -127,7 +155,7 @@ h1 {
 <p>📈 Phase: Early Accumulation</p>
 <p>🔥 Momentum: Increasing</p>
 
-<p style="color:#ff4d4d; font-weight:bold;">
+<p class="small" style="color:#ff4d4d; font-weight:bold;">
 Early entry window is still open.
 </p>
 </div>
@@ -138,9 +166,7 @@ Early entry window is still open.
 <p>
 SalaryLupangCoin ($SLACK) is a meme-driven crypto experiment inspired by modern work culture, internet humor, and degen behavior.
 </p>
-<p>
-<b>Work less. Meme more. Enter early.</b>
-</p>
+<p><b>Work less. Meme more. Enter early.</b></p>
 </div>
 
 <!-- TRUST -->
@@ -158,9 +184,12 @@ SalaryLupangCoin ($SLACK) is a meme-driven crypto experiment inspired by modern 
 <!-- TOKENOMICS -->
 <div class="card">
 <h2>📊 Tokenomics</h2>
+
 <p>Total Supply: 1,000,000,000 SLACK</p>
-<p>Contract: 0x17c7aCcA8CB87c575C276e3537A8790AAaDA9F80</p>
-<p>Tax: 0% Buy / 0% Sell</p>
+<p>Contract Address: 0x17c7aCcA8CB87c575C276e3537A8790AAaDA9F80</p>
+<p>Buy Tax: 0%</p>
+<p>Sell Tax: 0%</p>
+
 </div>
 
 <!-- ROADMAP -->
@@ -235,9 +264,8 @@ Not financial advice. Participation in meme economy culture.<br><br>
 <div class="card">
 <h2>📣 Community</h2>
 
-<!-- ✅ FIXED -->
-<a class="btn" href="https://twitter.com/yourhandle">Follow Twitter</a>
-<a class="btn" href="https://t.me/yourgroup">Join Telegram</a>
+<a class="btn" href="https://twitter.com/YOUR_REAL_TWITTER" target="_blank">Follow Twitter</a>
+<a class="btn" href="https://t.me/YOUR_REAL_TELEGRAM" target="_blank">Join Telegram</a>
 
 <p class="small">Community driven. No promises. Just memes and momentum.</p>
 </div>
