@@ -4,104 +4,100 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>$SLACK - Web3 Meme Asset</title>
+<title>SalaryLupangCoin ($SLACK)</title>
 
-<meta name="description" content="$SLACK - Salary Escape Meme Economy on BNB Chain">
+<meta name="description" content="$SLACK - Meme token powered by salary escape culture on BNB Smart Chain. Fair launch, locked liquidity, community driven.">
+
+<meta property="og:title" content="$SLACK - SalaryLupangCoin">
+<meta property="og:description" content="Fair launch meme token with locked liquidity and zero tax structure.">
+<meta property="og:image" content="https://christjoo1.github.io/slack-coin/slack-logo-transparent.png">
+<meta property="og:url" content="https://christjoo1.github.io/slack-coin/">
 
 <link rel="icon" href="https://christjoo1.github.io/slack-coin/slack-logo-transparent.png">
 
 <style>
 
-/* ===== BASE ===== */
 body{
 margin:0;
 font-family:Arial, sans-serif;
-background:#050814;
+background:#070a12;
 color:white;
+line-height:1.6;
 overflow-x:hidden;
 }
 
-/* ===== BACKGROUND GLOW ===== */
-.bg-glow{
+/* BACKGROUND */
+.bg{
 position:fixed;
-width:600px;
-height:600px;
+width:500px;
+height:500px;
 background:#00ffb3;
-filter:blur(200px);
-opacity:0.15;
-top:-200px;
-left:-200px;
-animation:float 8s ease-in-out infinite;
+filter:blur(180px);
+opacity:0.12;
+top:-150px;
+left:-150px;
+animation:move 10s infinite alternate;
 }
 
-@keyframes float{
-0%{transform:translate(0,0);}
-50%{transform:translate(100px,80px);}
-100%{transform:translate(0,0);}
+@keyframes move{
+from{transform:translate(0,0);}
+to{transform:translate(120px,80px);}
 }
 
-/* ===== NAV ===== */
+/* NAV */
 nav{
 display:flex;
 justify-content:space-between;
-align-items:center;
 padding:20px 40px;
-background:rgba(10,15,30,0.6);
+background:rgba(10,15,25,0.7);
 backdrop-filter:blur(10px);
 position:sticky;
 top:0;
 z-index:10;
 }
 
-nav h1{color:#00ffb3;font-size:18px;}
-
-/* ===== HERO ===== */
-.hero{
-text-align:center;
-padding:120px 20px;
-position:relative;
+nav h1{
+color:#00ffb3;
+font-size:18px;
 }
 
-.hero h2{
-font-size:64px;
+/* HERO */
+.hero{
+text-align:center;
+padding:110px 20px;
+}
+
+.hero h1{
+font-size:60px;
 margin:0;
-animation:fadeUp 1s ease;
 }
 
 .hero p{
 opacity:0.7;
 margin-top:10px;
-animation:fadeUp 1.2s ease;
 }
 
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(30px);}
-to{opacity:1;transform:translateY(0);}
-}
-
-/* BUTTONS */
 .btn{
 display:inline-block;
 margin:10px;
-padding:12px 20px;
+padding:12px 18px;
 border-radius:12px;
 background:#00ffb3;
 color:#000;
 font-weight:bold;
 text-decoration:none;
-transition:0.3s;
+transition:0.2s;
 }
 
 .btn:hover{
 transform:scale(1.05);
-background:#00dca0;
 }
 
-/* ===== SECTIONS ===== */
+/* SECTION */
 .section{
-max-width:1100px;
+max-width:1050px;
 margin:auto;
-padding:70px 20px;
+padding:60px 20px;
 }
 
 /* CARD */
@@ -113,8 +109,8 @@ border-radius:16px;
 margin:15px 0;
 
 opacity:0;
-transform:translateY(40px);
-transition:0.8s ease;
+transform:translateY(30px);
+transition:0.7s ease;
 }
 
 .card.show{
@@ -125,37 +121,13 @@ transform:translateY(0);
 /* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:18px;
 }
 
 /* TITLE */
 h2{
 color:#00ffb3;
-}
-
-/* CHART STYLE */
-.chart{
-height:120px;
-border-radius:12px;
-background:linear-gradient(90deg,#00ffb3,transparent);
-opacity:0.2;
-position:relative;
-overflow:hidden;
-}
-
-.chart::after{
-content:"";
-position:absolute;
-width:100%;
-height:100%;
-background:linear-gradient(45deg,transparent,#00ffb3,transparent);
-animation:shine 3s infinite;
-}
-
-@keyframes shine{
-0%{transform:translateX(-100%);}
-100%{transform:translateX(100%);}
 }
 
 /* FOOTER */
@@ -172,24 +144,24 @@ border-top:1px solid rgba(255,255,255,0.1);
 
 <body>
 
-<div class="bg-glow"></div>
+<div class="bg"></div>
 
 <nav>
 <h1>💼 $SLACK</h1>
-<div>BNB Chain Web3 Asset</div>
+<div>BNB Chain Meme Asset</div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-<h2>$SLACK</h2>
+<h1>$SLACK</h1>
 <p>Salary Escape → Meme Economy → Community Value</p>
 
-<a class="btn" href="#buy">Buy</a>
-<a class="btn" href="#whitepaper">Whitepaper</a>
+<a class="btn" href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x17c7aCcA8CB87c575C276e3537A8790AAaDA9F80">Buy</a>
 <a class="btn" href="https://bscscan.com/token/0x17c7aCcA8CB87c575C276e3537A8790AAaDA9F80">Verify</a>
+<a class="btn" href="#community">Community</a>
 </div>
 
-<!-- LIVE DATA -->
+<!-- CONTRACT -->
 <div class="section">
 
 <div class="card">
@@ -218,23 +190,16 @@ border-top:1px solid rgba(255,255,255,0.1);
 
 </div>
 
-<!-- CHART -->
-<div class="section">
-<div class="card">
-<h2>📈 Market Momentum</h2>
-<div class="chart"></div>
-<p>Community-driven momentum visualization</p>
-</div>
-</div>
-
 <!-- ABOUT -->
 <div class="section">
+
 <div class="card">
-<h2>🔥 What is $SLACK?</h2>
+<h2>🔥 About $SLACK</h2>
 <p>
-A meme-driven Web3 experiment built around salary escape culture and viral internet behavior.
+SalaryLupangCoin is a meme-driven Web3 experiment based on salary escape culture and viral internet behavior.
 </p>
 </div>
+
 </div>
 
 <!-- TOKENOMICS -->
@@ -246,17 +211,17 @@ A meme-driven Web3 experiment built around salary escape culture and viral inter
 
 <div class="card">
 <b>Total Supply</b>
-<p>1,000,000,000</p>
-</div>
-
-<div class="card">
-<b>Liquidity</b>
-<p>Locked</p>
+<p>1,000,000,000 SLACK</p>
 </div>
 
 <div class="card">
 <b>Distribution</b>
 <p>80% Community / 10% Team / 10% Marketing</p>
+</div>
+
+<div class="card">
+<b>Liquidity</b>
+<p>Locked</p>
 </div>
 
 <div class="card">
@@ -268,15 +233,33 @@ A meme-driven Web3 experiment built around salary escape culture and viral inter
 
 </div>
 
+<!-- COMMUNITY -->
+<div class="section" id="community">
+
+<div class="card">
+<h2>🌐 Community</h2>
+
+<a class="btn" href="YOUR_TWITTER" target="_blank">Twitter</a>
+<a class="btn" href="YOUR_TELEGRAM" target="_blank">Telegram</a>
+<a class="btn" href="YOUR_DISCORD" target="_blank">Discord</a>
+
+<p style="margin-top:15px;opacity:0.7;font-size:12px;">
+Join the early community and shape the meme economy.
+</p>
+
+</div>
+
+</div>
+
 <!-- WHITEPAPER -->
-<div class="section" id="whitepaper">
+<div class="section">
 
 <div class="card">
 <h2>📄 Whitepaper</h2>
 
 <p>
-Vision: Build meme-powered financial culture.<br><br>
-Problem: Traditional salary systems limit freedom.<br><br>
+Vision: Build a meme-powered financial culture.<br><br>
+Problem: Salary-based systems limit freedom.<br><br>
 Solution: Community-driven attention economy.<br><br>
 Roadmap: Launch → Growth → Listings → Expansion
 </p>
@@ -285,48 +268,25 @@ Roadmap: Launch → Growth → Listings → Expansion
 
 </div>
 
-<!-- BUY -->
-<div class="section" id="buy">
-
-<div class="card">
-<h2>🚀 Buy $SLACK</h2>
-<a class="btn" href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x17c7aCcA8CB87c575C276e3537A8790AAaDA9F80">
-Open PancakeSwap
-</a>
-</div>
-
-</div>
-
-<!-- COMMUNITY -->
-<div class="section">
-
-<div class="card">
-<h2>🌐 Community</h2>
-<a class="btn" href="https://twitter.com/">Twitter</a>
-<a class="btn" href="https://t.me/">Telegram</a>
-</div>
-
-</div>
-
 <footer>
-$SLACK — Web3 Meme Economy Experiment
+$SLACK — Meme Economy Experiment (DYOR)
 </footer>
 
 <script>
 
-/* ===== SCROLL ANIMATION ===== */
+/* scroll animation */
 const cards = document.querySelectorAll('.card');
 
 window.addEventListener('scroll', () => {
-cards.forEach(card => {
-const rect = card.getBoundingClientRect();
+cards.forEach(c => {
+const rect = c.getBoundingClientRect();
 if(rect.top < window.innerHeight - 80){
-card.classList.add('show');
+c.classList.add('show');
 }
 });
 });
 
-/* trigger on load */
+/* initial trigger */
 window.dispatchEvent(new Event('scroll'));
 
 </script>
