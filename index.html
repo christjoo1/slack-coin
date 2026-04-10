@@ -4,302 +4,332 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SalaryLupangCoin ($SLACK)</title>
+<title>$SLACK - Web3 Meme Asset</title>
 
-<meta name="description" content="SalaryLupangCoin ($SLACK) - Meme token powered by salary escape culture. Community-driven fair launch experiment on BNB Smart Chain.">
-
-<meta property="og:title" content="SalaryLupangCoin ($SLACK)">
-<meta property="og:description" content="Community-driven meme token with fair launch and locked liquidity.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://christjoo1.github.io/slack-coin/slack-logo-transparent.png">
-<meta property="og:url" content="https://christjoo1.github.io/slack-coin/">
+<meta name="description" content="$SLACK - Salary Escape Meme Economy on BNB Chain">
 
 <link rel="icon" href="https://christjoo1.github.io/slack-coin/slack-logo-transparent.png">
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0b0b0b;
-    color: white;
-    line-height: 1.6;
+
+/* ===== BASE ===== */
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#050814;
+color:white;
+overflow-x:hidden;
 }
 
-/* ===== HEADER ===== */
-header {
-    text-align: center;
-    padding: 90px 20px;
-    background: linear-gradient(45deg, #111, #222);
-    position: relative;
+/* ===== BACKGROUND GLOW ===== */
+.bg-glow{
+position:fixed;
+width:600px;
+height:600px;
+background:#00ffb3;
+filter:blur(200px);
+opacity:0.15;
+top:-200px;
+left:-200px;
+animation:float 8s ease-in-out infinite;
 }
 
-/* LOGO FIX (IMPORTANT) */
-.logo {
-    width: 120px;
-    margin-bottom: 15px;
-    filter: drop-shadow(0 0 12px #00ff99);
+@keyframes float{
+0%{transform:translate(0,0);}
+50%{transform:translate(100px,80px);}
+100%{transform:translate(0,0);}
 }
 
-h1 {
-    font-size: 52px;
-    margin-bottom: 10px;
+/* ===== NAV ===== */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:rgba(10,15,30,0.6);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:10;
 }
 
-.tagline {
-    color: #00ff99;
-    font-size: 18px;
+nav h1{color:#00ffb3;font-size:18px;}
+
+/* ===== HERO ===== */
+.hero{
+text-align:center;
+padding:120px 20px;
+position:relative;
 }
 
-.fomo {
-    color: #ff4d4d;
-    font-weight: bold;
-    margin-top: 10px;
+.hero h2{
+font-size:64px;
+margin:0;
+animation:fadeUp 1s ease;
+}
+
+.hero p{
+opacity:0.7;
+margin-top:10px;
+animation:fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
 }
 
 /* BUTTONS */
-.btn {
-    display: inline-block;
-    margin: 8px;
-    padding: 12px 22px;
-    background: #00ff99;
-    color: black;
-    font-weight: bold;
-    border-radius: 10px;
-    text-decoration: none;
+.btn{
+display:inline-block;
+margin:10px;
+padding:12px 20px;
+border-radius:12px;
+background:#00ffb3;
+color:#000;
+font-weight:bold;
+text-decoration:none;
+transition:0.3s;
 }
 
-.btn:hover {
-    background: #00cc77;
+.btn:hover{
+transform:scale(1.05);
+background:#00dca0;
 }
 
-/* SECTION */
-.section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 60px 20px;
+/* ===== SECTIONS ===== */
+.section{
+max-width:1100px;
+margin:auto;
+padding:70px 20px;
 }
 
 /* CARD */
-.card {
-    background: #161616;
-    padding: 25px;
-    margin: 20px 0;
-    border-radius: 14px;
-    border: 1px solid #222;
+.card{
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+padding:22px;
+border-radius:16px;
+margin:15px 0;
+
+opacity:0;
+transform:translateY(40px);
+transition:0.8s ease;
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
 }
 
 /* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
-/* SMALL TEXT */
-.small {
-    font-size: 13px;
-    opacity: 0.7;
+/* TITLE */
+h2{
+color:#00ffb3;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .grid { grid-template-columns: 1fr; }
+/* CHART STYLE */
+.chart{
+height:120px;
+border-radius:12px;
+background:linear-gradient(90deg,#00ffb3,transparent);
+opacity:0.2;
+position:relative;
+overflow:hidden;
 }
+
+.chart::after{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(45deg,transparent,#00ffb3,transparent);
+animation:shine 3s infinite;
+}
+
+@keyframes shine{
+0%{transform:translateX(-100%);}
+100%{transform:translateX(100%);}
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:40px;
+opacity:0.5;
+font-size:12px;
+border-top:1px solid rgba(255,255,255,0.1);
+}
+
 </style>
-
 </head>
 
 <body>
 
-<header>
+<div class="bg-glow"></div>
 
-    <!-- ✅ LOGO (FIXED) -->
-    <img class="logo" src="https://christjoo1.github.io/slack-coin/slack-logo-transparent.png" alt="$SLACK Logo">
+<nav>
+<h1>💼 $SLACK</h1>
+<div>BNB Chain Web3 Asset</div>
+</nav>
 
-    <h1>💸 SalaryLupangCoin ($SLACK)</h1>
-    <p class="tagline">Escape Salary. Join the Meme Economy 🚀</p>
+<!-- HERO -->
+<div class="hero">
+<h2>$SLACK</h2>
+<p>Salary Escape → Meme Economy → Community Value</p>
 
-    <p class="fomo">⚠️ Early Stage Entry — Before Viral Expansion</p>
-
-    <!-- REAL LINKS -->
-    <a class="btn" href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x17c7aCcA8CB87c575C276e3537A8790AAaDA9F80" target="_blank">
-        Buy on PancakeSwap
-    </a>
-
-    <a class="btn" href="https://bscscan.com/token/0x17c7aCcA8CB87c575C276e3537A8790AAaDA9F80" target="_blank">
-        View on BscScan
-    </a>
-
-    <a class="btn" href="#whitepaper">Read Whitepaper</a>
-
-</header>
-
-<!-- FOMO STRIP -->
-<div style="text-align:center; padding:20px;">
-  <p style="color:#ff4d4d; font-weight:bold; font-size:18px;">
-    ⚠ Early Accumulation Phase — Limited Window
-  </p>
-  <p style="color:#00ff99;">
-    Community Driven • Fair Launch • Meme Powered Economy
-  </p>
+<a class="btn" href="#buy">Buy</a>
+<a class="btn" href="#whitepaper">Whitepaper</a>
+<a class="btn" href="https://bscscan.com/token/0x17c7aCcA8CB87c575C276e3537A8790AAaDA9F80">Verify</a>
 </div>
 
+<!-- LIVE DATA -->
 <div class="section">
 
-<!-- LIVE STATS -->
-<div class="card" style="border:1px solid #00ff99;">
-<h2>📊 Live Stats</h2>
+<div class="card">
+<h2>🔗 Contract</h2>
+<p>0x17c7aCcA8CB87c575C276e3537A8790AAaDA9F80</p>
+</div>
 
-<p>👥 Contract: 0x17c7aCcA8CB87c575C276e3537A8790AAaDA9F80</p>
-<p>💧 Liquidity: Locked 🔒 (On-chain verified)</p>
-<p>📈 Phase: Early Accumulation</p>
-<p>🔥 Momentum: Increasing</p>
+<div class="grid">
 
-<p class="small" style="color:#ff4d4d; font-weight:bold;">
-Early entry window is still open.
-</p>
+<div class="card">
+<h2>💧 Liquidity</h2>
+<p>Locked (On-chain Verified)</p>
+</div>
+
+<div class="card">
+<h2>⚡ Tax</h2>
+<p>0% Buy / 0% Sell</p>
+</div>
+
+<div class="card">
+<h2>🌐 Network</h2>
+<p>BNB Smart Chain</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- CHART -->
+<div class="section">
+<div class="card">
+<h2>📈 Market Momentum</h2>
+<div class="chart"></div>
+<p>Community-driven momentum visualization</p>
+</div>
 </div>
 
 <!-- ABOUT -->
+<div class="section">
 <div class="card">
 <h2>🔥 What is $SLACK?</h2>
 <p>
-SalaryLupangCoin ($SLACK) is a meme-driven crypto experiment inspired by modern work culture, internet humor, and degen behavior.
+A meme-driven Web3 experiment built around salary escape culture and viral internet behavior.
 </p>
-<p><b>Work less. Meme more. Enter early.</b></p>
 </div>
-
-<!-- TRUST -->
-<div class="card">
-<h2>🛡 Trust Verification</h2>
-
-<p>✔ Smart Contract Verified (BSC)</p>
-<p>✔ Liquidity Locked 🔒</p>
-<p>✔ No Mint Function</p>
-<p>✔ No Presale / No Insider Allocation</p>
-
-<p class="small">All data verifiable on-chain. DYOR.</p>
 </div>
 
 <!-- TOKENOMICS -->
-<div class="card">
+<div class="section">
+
 <h2>📊 Tokenomics</h2>
 
-<p>Total Supply: 1,000,000,000 SLACK</p>
-<p>Contract Address: 0x17c7aCcA8CB87c575C276e3537A8790AAaDA9F80</p>
-<p>Buy Tax: 0%</p>
-<p>Sell Tax: 0%</p>
-
-</div>
-
-<!-- ROADMAP -->
-<div class="card">
-<h2>🗺 Roadmap</h2>
-
 <div class="grid">
-<div>
-<h3>Phase 1</h3>
-<p>Launch + Liquidity Setup</p>
+
+<div class="card">
+<b>Total Supply</b>
+<p>1,000,000,000</p>
 </div>
 
-<div>
-<h3>Phase 2</h3>
-<p>Community Growth</p>
+<div class="card">
+<b>Liquidity</b>
+<p>Locked</p>
 </div>
 
-<div>
-<h3>Phase 3</h3>
-<p>CMC / CG Listing</p>
+<div class="card">
+<b>Distribution</b>
+<p>80% Community / 10% Team / 10% Marketing</p>
 </div>
 
-<div>
-<h3>Phase 4</h3>
-<p>Meme Expansion</p>
+<div class="card">
+<b>Status</b>
+<p>Fair Launch</p>
 </div>
+
 </div>
 
 </div>
 
 <!-- WHITEPAPER -->
-<div class="card" id="whitepaper">
+<div class="section" id="whitepaper">
+
+<div class="card">
 <h2>📄 Whitepaper</h2>
 
-<div style="
-max-height: 450px;
-overflow-y: auto;
-padding: 12px;
-border-radius: 10px;
-border: 1px solid #333;
-background: #111;
-">
-
-<p><b>Introduction</b><br>
-$SLACK is a cultural experiment based on meme economy behavior and modern work dissatisfaction.</p>
-
-<p><b>Vision</b><br>
-To become a globally recognized meme asset driven by community and internet culture.</p>
-
-<p><b>Mission</b><br>
-✔ No presale<br>✔ No insider allocation<br>✔ Fully fair launch</p>
-
-<p><b>Philosophy</b><br>
-Attention is the core value in meme markets.</p>
-
-<p><b>Tokenomics</b><br>
-1B Supply • Locked Liquidity • 0% Tax</p>
-
-<p><b>Security Notice</b><br>
-⚠ High volatility asset<br>
-⚠ No guaranteed returns<br>
-⚠ Experimental community-driven token</p>
-
-<p><b>Conclusion</b><br>
-Not financial advice. Participation in meme economy culture.<br><br>
-<b>Welcome to $SLACK 🚀</b></p>
+<p>
+Vision: Build meme-powered financial culture.<br><br>
+Problem: Traditional salary systems limit freedom.<br><br>
+Solution: Community-driven attention economy.<br><br>
+Roadmap: Launch → Growth → Listings → Expansion
+</p>
 
 </div>
+
+</div>
+
+<!-- BUY -->
+<div class="section" id="buy">
+
+<div class="card">
+<h2>🚀 Buy $SLACK</h2>
+<a class="btn" href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x17c7aCcA8CB87c575C276e3537A8790AAaDA9F80">
+Open PancakeSwap
+</a>
+</div>
+
 </div>
 
 <!-- COMMUNITY -->
+<div class="section">
+
 <div class="card">
-<h2>📣 Community</h2>
-
-<a class="btn" href="https://twitter.com/YOUR_REAL_TWITTER" target="_blank">Follow Twitter</a>
-<a class="btn" href="https://t.me/YOUR_REAL_TELEGRAM" target="_blank">Join Telegram</a>
-
-<p class="small">Community driven. No promises. Just memes and momentum.</p>
-</div>
-
-<!-- FINAL CTA -->
-<div class="card" style="text-align:center; border:1px solid #ff4d4d;">
-<h2>🚀 Final Entry Window</h2>
-
-<p style="color:#ff4d4d; font-weight:bold;">
-Don’t watch the cycle. Become part of it early.
-</p>
-
-<a class="btn" href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x17c7aCcA8CB87c575C276e3537A8790AAaDA9F80">
-🚀 Buy $SLACK Now
-</a>
-
-</div>
-
-<!-- FAQ -->
-<div class="card">
-<h2>❓ FAQ</h2>
-
-<p><b>Is $SLACK safe?</b><br>High-risk meme token. DYOR.</p>
-<p><b>Team allocation?</b><br>No.</p>
-<p><b>Why early matters?</b><br>Meme cycles reward timing.</p>
-<p><b>Financial advice?</b><br>No.</p>
-
+<h2>🌐 Community</h2>
+<a class="btn" href="https://twitter.com/">Twitter</a>
+<a class="btn" href="https://t.me/">Telegram</a>
 </div>
 
 </div>
 
-<footer style="text-align:center; padding:40px; opacity:0.5;">
-<p>© 2026 SalaryLupangCoin ($SLACK) — Meme Culture Experiment</p>
+<footer>
+$SLACK — Web3 Meme Economy Experiment
 </footer>
+
+<script>
+
+/* ===== SCROLL ANIMATION ===== */
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+cards.forEach(card => {
+const rect = card.getBoundingClientRect();
+if(rect.top < window.innerHeight - 80){
+card.classList.add('show');
+}
+});
+});
+
+/* trigger on load */
+window.dispatchEvent(new Event('scroll'));
+
+</script>
 
 </body>
 </html>
